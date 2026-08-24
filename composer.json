@@ -1,0 +1,59 @@
+{
+    "name": "pds/wp-2fa",
+    "description": "Role-based two-factor authentication for WordPress.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "two-factor-authentication",
+        "2fa",
+        "totp",
+        "webauthn"
+    ],
+    "homepage": "https://github.com/PDS-UK/pds-wp-2fa",
+    "authors": [
+        {
+            "name": "PDS UK",
+            "homepage": "https://github.com/PDS-UK"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/PDS-UK/pds-wp-2fa/issues",
+        "source": "https://github.com/PDS-UK/pds-wp-2fa",
+        "docs": "https://github.com/PDS-UK/pds-wp-2fa#readme",
+        "security": "https://github.com/PDS-UK/pds-wp-2fa/security/policy"
+    },
+    "require": {
+        "php": ">=8.3",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-sodium": "*",
+        "composer/installers": "^2.3",
+        "spomky-labs/otphp": "^11.5.0",
+        "web-auth/webauthn-lib": "^5.3",
+        "bacon/bacon-qr-code": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PDS\\WP2FA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PDS\\WP2FA\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "installer-name": "pds-wp-2fa"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
